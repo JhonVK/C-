@@ -3,21 +3,15 @@ using namespace std;
 #include <string>
 
 
-class MyClass {       // The class
-  public:             // Access specifier
-    int myNum;        // Attribute (int variable)
-    string myString;  // Attribute (string variable)
+class MyClass {        // The class
+  public:              // Access specifier
+    void myMethod() {  // Method/function defined inside the class
+      cout << "Hello World!";
+    }
 };
 
 int main() {
-  MyClass myObj;  // Create an object of MyClass
-
-  // Access attributes and set values
-  myObj.myNum = 15; 
-  myObj.myString = "Some text";
-
-  // Print attribute values
-  cout << myObj.myNum << "\n";
-  cout << myObj.myString;
+  MyClass myObj;     // Create an object of MyClass
+  myObj.myMethod();  // Call the method
   return 0;
 }
